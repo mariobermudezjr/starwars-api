@@ -1,14 +1,30 @@
 import React from 'react';
 import Card from './Card';
 
-const CardList = ({ robots }) => {
+const CardList = ({ people }) => {
   // if (true) {
   //   throw new Error('Noooo!');
   // }
-  const cardsArray = robots.map((user, i) => {
-    return <Card key={user.id} id={user.id} name={user.name} email={user.email} />;
+
+  const peopleArray = people.map((person, i) => {
+    return (
+      <Card
+        key={person.name}
+        id={person.name}
+        person={person.name}
+        height={person.height}
+        mass={person.mass}
+        hairColor={person.hair_color}
+        skinColor={person.skin_color}
+        eyeColor={person.eye_color}
+        birthYear={person.birth_year}
+        gender={person.gender}
+        homeWorld={person.homeworld}
+      />
+    );
   });
-  return <div>{cardsArray}</div>;
+
+  return <div>{peopleArray}</div>;
 };
 
 export default CardList;

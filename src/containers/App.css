@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+.AppLoading {
+  text-align: center;
+  background: black;
+}
 
 .App-logo {
   height: 80px;
